@@ -1,0 +1,48 @@
+<form class="top-container">
+  <div class="left-side">
+    <div class="tag">Tags</div>
+    <mat-form-field class="chips">
+      <mat-chip-list #chipList class="field">
+        <mat-chip *ngFor="let tag of tags"
+                  [selectable]="selectable"
+                  [removable]="removable"
+                  [color]="primary"
+                  selected
+                  (removed)="remove(tag)">
+          {{tag.name}}
+          <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+        </mat-chip>
+        <input
+                [matChipInputFor]="chipList"
+                [matChipInputSeparatorKeyCodes]="separatorKeysCodes"
+                [matChipInputAddOnBlur]="addOnBlur"
+                (matChipInputTokenEnd)="add($event)">
+      </mat-chip-list>
+    </mat-form-field>
+
+    <div class="fild-name">Method</div>
+    <mat-form-field>
+      <mat-select [(value)]="selected">
+        <mat-option *ngFor="let method of methods" [value]="method.value">
+          {{method.viewValue}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <div class="fild-name">Path</div>
+    <mat-form-field class="path">
+      <input matInput [(value)]="path">
+    </mat-form-field>
+  </div>
+  <div class="right-side">
+    <div class="fild-name">Description</div>
+    <mat-form-field class="description">
+      <textarea
+        [(value)]="description"
+        matInput
+        cdkTextareaAutosize
+        cdkAutosizeMinRows="2"
+        cdkAutosizeMaxRows="4"></textarea>
+    </mat-form-field>
+  </div>
+</form>

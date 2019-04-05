@@ -1,0 +1,31 @@
+<div class="bottom-container">
+  <div class="item">
+    <div class="circle"></div>
+
+    <div class="line-arrow">
+      <div *ngIf="middlewares.length < 5" class="line"></div>
+      <div class="arrow"></div>
+    </div>
+  </div>
+  <div class="item" *ngFor="let middleware of middlewares">
+    <div class="controller-container">
+      <div class="controller-icon">
+        <mat-icon class="icon">functions</mat-icon>
+      </div>
+      <div class="controller-title">
+        {{middleware.name}}
+      </div>
+      <div class="controller-options">
+        <mat-icon (click)="onEditClick()">create</mat-icon>
+        <mat-icon (click)="onDeleteClick()">delete</mat-icon>
+      </div>
+    </div>
+    <div class="line-arrow">
+      <div *ngIf="middlewares.length < 5" class="line"></div>
+      <div class="arrow"></div>
+    </div>
+  </div>
+  <div class="hollow-circle">
+    <div class="dot"></div>
+  </div>
+</div>

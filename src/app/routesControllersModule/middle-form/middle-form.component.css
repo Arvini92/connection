@@ -1,0 +1,30 @@
+.top-container {
+  display: flex;
+  margin-top: 20px;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-left: 40px;
+}
+
+.fild-name {
+  color: var(--darkest-grey);
+  margin-bottom: 10px;
+}
+.tag {
+  color: var(--darkest-grey);
+}
+
+.description {
+  margin-top: 3px;
+  height: 100%;
+}

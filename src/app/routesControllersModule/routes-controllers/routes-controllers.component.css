@@ -1,0 +1,27 @@
+:host {
+    display: flex;
+}
+
+.background {
+    background-color: var(--lite-grey);
+    margin: 5px 5px 5px 400px;
+    height: calc(100vh - 20px);
+    border-radius: 6px;
+    display: flex;
+    flex-grow: 1;
+}
+
+.container {
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+  
+.title {
+    color: var(--darkest-grey);
+    margin-bottom: 200px;
+    font-size: 14px;
+    margin: 0;
+}
+  

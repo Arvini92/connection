@@ -1,0 +1,32 @@
+<div id="myModal" class="modal fade">
+  <div class="modal-dialog modal-confirm">
+    <div class="modal-content">
+      <!-- <div class="icon-box" #iconBox>
+        <i class="material-icons">&#xE5CD;</i>
+      </div> -->
+      <div class="modal-header">
+        <h4 class="modal-title">Are you sure?</h4>
+      </div>
+      <div class="modal-body">
+        <p>Do you really want to delete this controller? This process cannot be undone.</p>
+      </div>
+      <div class="modal-footer">
+        <!-- <button type="button" class="btn btn-info" (click)="onCancelClick()">Cancel</button> -->
+        <!-- <button type="button" class="btn btn-danger" (click)="onDeleteClick()">Delete</button> -->
+        <button type="button" class="button cancel" (click)="onCancelClick()">
+          <span class="text">Cancel</span>
+          <div class="icon">
+            <mat-icon class="remove">not_interested</mat-icon>
+          </div>
+        </button>
+        <button type="button" class="button delete" (click)="onDeleteClick(delete)" #delete>
+          <span class="text">Delete</span>
+          <div class="icon">
+            <mat-icon class="remove">close</mat-icon>
+            <mat-icon class="check">done</mat-icon>
+          </div>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
