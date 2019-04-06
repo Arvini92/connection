@@ -4,7 +4,7 @@
 
 .background {
     background-color: var(--lite-grey);
-    margin: 5px 5px 5px 400px;
+    margin: 5px 5px 5px 5px;
     height: calc(100vh - 20px);
     border-radius: 6px;
     display: flex;
